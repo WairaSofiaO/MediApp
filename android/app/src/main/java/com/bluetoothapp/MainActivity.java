@@ -1,6 +1,10 @@
 package com.bluetoothapp;
 
+import android.os.Bundle;
+import com.estimote.coresdk.common.requirements.SystemRequirementsChecker;
+
 import com.facebook.react.ReactActivity;
+import com.facebook.react.bridge.ReactMethod;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +15,12 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "bluetoothApp";
+  }
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+
+    SystemRequirementsChecker.checkWithDefaultDialogs(this);
   }
 }
