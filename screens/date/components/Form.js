@@ -55,9 +55,9 @@ export default function Form(props){
                     <TextInput style={styles.textInput} placeholder="phone" keyboardType="phone-pad" onChangeText={text => setphone(text)} />
                     <TextInput style={styles.textInput} placeholder="City" keyboardType="default" onChangeText={text => setCity(text)} />
                     <TextInput style={styles.textInput} placeholder="neighborhood" keyboardType="default" onChangeText={text => setneighborhood(text)} />
-                    <Text>Date Appointment</Text>
-                    <Text>hours</Text>
-                    <Text>doctor</Text>
+                    <TextInput style={styles.textInput} placeholder="Date Appointment" keyboardType="default" onChangeText={text => setDate(text)} />
+                    <TextInput style={styles.textInput} placeholder="Hours" keyboardType="default" onChangeText={text => sethours(text)} />
+                    <TextInput style={styles.textInput} placeholder="Doctor" keyboardType="default" onChangeText={text => setdoctor(text)} />
                     <TouchableHighlight style={styles.createTaskButton} onPress={create}>
                         <Text style={styles.textStyleButton}>Create Appointment  </Text>
                     </TouchableHighlight>            
@@ -71,11 +71,11 @@ export default function Form(props){
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: '82%',
+    height: '86%',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 40,
-    paddingBottom: 40,
+    paddingTop: 10,
+    paddingBottom: 50,
     //backgroundColor: 'red',
   },
   form: {
